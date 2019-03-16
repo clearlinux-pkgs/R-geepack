@@ -4,14 +4,14 @@
 #
 Name     : R-geepack
 Version  : 1.2.1
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/geepack_1.2-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/geepack_1.2-1.tar.gz
 Summary  : Generalized Estimating Equation Package
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-geepack-lib
-BuildRequires : clr-R-helpers
+Requires: R-geepack-lib = %{version}-%{release}
+BuildRequires : buildreq-R
 
 %description
 mean, scale, and correlation structures, through mean link,
@@ -34,11 +34,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523742353
+export SOURCE_DATE_EPOCH=1552761747
 
 %install
+export SOURCE_DATE_EPOCH=1552761747
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523742353
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,8 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library geepack|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  geepack || :
 
 
 %files
@@ -145,7 +144,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/geepack/include/tnt/version.h
 /usr/lib64/R/library/geepack/include/tntsupp.h
 /usr/lib64/R/library/geepack/include/utils.h
-/usr/lib64/R/library/geepack/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
