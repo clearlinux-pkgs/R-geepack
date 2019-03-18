@@ -4,7 +4,7 @@
 #
 Name     : R-geepack
 Version  : 1.2.1
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/geepack_1.2-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/geepack_1.2-1.tar.gz
 Summary  : Generalized Estimating Equation Package
@@ -34,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552761747
+export SOURCE_DATE_EPOCH=1552922947
 
 %install
-export SOURCE_DATE_EPOCH=1552761747
+export SOURCE_DATE_EPOCH=1552922947
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
