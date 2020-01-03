@@ -4,7 +4,7 @@
 #
 Name     : R-geepack
 Version  : 1.3.1
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/geepack_1.3-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/geepack_1.3-1.tar.gz
 Summary  : Generalized Estimating Equation Package
